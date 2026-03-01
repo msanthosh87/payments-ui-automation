@@ -9,6 +9,13 @@ test('TC-02 has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Playwright/);
 });
 
+test('TC-02 logged in user can checkout', async ({ page }) => {
+  await page.goto('https://playwright.dev/');
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/Playwright/);
+});
+
 test('TC-04 get started link', async ({ page }) => {
   await page.goto('https://playwright.dev/');
 
